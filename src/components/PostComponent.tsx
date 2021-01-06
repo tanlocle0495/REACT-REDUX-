@@ -61,27 +61,19 @@ const UserStatus:FC<StatusProp> = () => {
   return (
 
     <View style={style.descriptionRoot}>
-      <Download />
+      <View style={{ width: "100%",justifyContent:"flex-end",flexDirection:"row"}}>
+        <View style={{alignSelf:"baseline",padding:4,backgroundColor:"#ccc",borderRadius:4,flexDirection:"row",justifyContent:"center"}}>
+          <Text style={{ fontSize: 16 }}>Download</Text>
+          <View style={{ width: 8 }} />
+          <Image style={style.download} source={ICON.DOWNLOAD} />
+        </View>
+
+      </View>
     </View>);
 };
 
 const Download = () => {
-  return (
-    <View style={{ width: "100%",backgroundColor:"red",justifyContent:"flex-end",alignSelf:"flex-end" }}>
-      <View style={{
-        alignItems: "center",
-        borderRadius: 4,
-        backgroundColor: "#eee",
-        flexDirection: "row",
-        alignSelf: "baseline",
-        padding: 4,
-      }}>
-        <Text style={{ fontSize: 16 }}>Download</Text>
-        <View style={{ width: 8 }} />
-        <Image style={style.download} source={ICON.DOWNLOAD} />
-      </View>
-    </View>
-  );
+
 };
 
 const style = StyleSheet.create({
